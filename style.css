@@ -60,21 +60,26 @@ a {
     background-color: #ddd;
     color: black;
 }
+
 #navigation a.active {
     background-color: #f57a93;
     color: white;
   }
   
-
-/* About Section */
-#about-content {
+main {
     display: flex;
     align-items: center;
 }
-#about-content img {
+
+#image-container {
+    align-self: flex-start;
+}
+
+#image-container img {
     margin-right: 1em;
-    width: auto;
+    width: 250px;
     height: auto;
+    margin-top: 1.5em;
 }
 
 .career-milestone {
