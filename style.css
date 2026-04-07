@@ -17,8 +17,10 @@ main {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     padding: 0.5em;
+    margin-bottom: 0;
+    font-family: 'Savoye LET', cursive;
 }
 
 h2 {
@@ -59,12 +61,10 @@ a {
     color: black;
 }
 #navigation a.active {
-    background-color: #0081d1;
+    background-color: #f57a93;
     color: white;
   }
   
-  
-
 
 /* About Section */
 #about-content {
