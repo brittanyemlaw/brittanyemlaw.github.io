@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tornado Outlook</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
         .risk-container {
             background: white;
             padding: 20px;
@@ -27,7 +21,7 @@
             border-radius: 5px;
             color: white;
         }
-        h2 {
+        h3 {
             margin-bottom: 0.2em;
         }
         .distance-description {
@@ -75,11 +69,21 @@
     </style>
 </head>
 <body>
-    <h1>Tornado Outlook</h1>
-    <div id="loading">Loading your location...</div>
-    <div id="risk-display" class="risk-container" style="display: none;"></div>
-    <div id="map"></div>
-
+    <header>
+      <h1>Brittany Emlaw</h1>
+    </header>
+    <div class="navigation" id="navigation">
+      <a href="index.html" >Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="library.html">Library</a>
+      <a href="travel.html">Travel</a>
+    </div>
+    <main>
+        <h2>Tornado Outlook</h2>
+        <div id="loading">Loading your location...</div>
+        <div id="risk-display" class="risk-container" style="display: none;"></div>
+        <div id="map"></div>
+    </main>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         const riskColors = {
@@ -284,7 +288,7 @@
             if (currentRisk === null) {
                 display.innerHTML = `
                     <div class="risk-level risk-none">
-                        <h2>No Notable Tornado Risk in ${cityName}</h2>
+                        <h3>No Notable Tornado Risk in ${cityName}</h3>
                         <p>The Storm Prediction Center has not highlighted this area for tornado potential today</p>
                     </div>
                 `;
@@ -292,7 +296,7 @@
                 const historical = await analyzeHistoricalData(data, currentRisk);
                 display.innerHTML = `
                     <div class="risk-level ${getRiskClass(currentRisk)}">
-                        <h2>Today's Tornado Risk in ${cityName}: ${currentRisk}%</h2>
+                        <h3>Today's Tornado Risk in ${cityName}: ${currentRisk}%</h3>
                         <p class="distance-description">Risk of a tornado within 25 miles</p>
                         <p>Frequency: ${historical.frequency}</p>
                         <p>${historical.dateDisplay}</p>
