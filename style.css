@@ -172,3 +172,33 @@ a {
     max-width: 300px;
     padding-left: 1em;
 }
+
+.pull-list-page {
+    max-width: 48em;
+    margin: auto;
+    padding: 1.5em 1em;
+    line-height: 1.6;
+}
+
+.pull-list-tagline {
+    font-size: 1.25em;
+}
+
+.pull-list-page section {
+    margin-top: 2em;
+}
+
+.pull-list-page li {
+    margin-bottom: 0.5em;
+}
+
+.pull-list-page a {
+    text-decoration: underline;
+}
+
+.pull-list-page footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+    padding-top: 1em;
+    font-size: 0.875em;
+}
